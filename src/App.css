@@ -50,6 +50,8 @@ body {
   background: var(--bg);
   font-family: var(--text);
   font-weight: 600;
+  width: 100vw;
+  height: 100vh;
 }
 
 /*************** HEADER ***************/
@@ -60,9 +62,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 1em 2em;
   width: 50%;
   margin: 2em auto;
+}
+
+.header__logo {
+  width: 15%;
 }
 
 .header__score {
@@ -82,11 +88,49 @@ body {
 }
 
 .score__score {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--header-outline);
   font-weight: 700;
   /* border: 1px red solid; */
   margin: 0;
   padding: 0;
   line-height: .85;
+}
+
+/*************** MEDIA ***************/
+
+@media (max-width: 1200px) {
+	:root {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 1060px) {
+	:root {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 992px) {	
+	:root {
+        font-size: .75rem;
+    }
+}
+
+@media (max-width: 900px) {	
+	:root {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 768px) {
+	:root {
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 580px) {
+	:root {
+        font-size: .6rem;
+    }
 }
