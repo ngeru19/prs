@@ -32,3 +32,20 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+/*************** VARIABLES ***************/
+
+html {
+  --text: 'Barlow Semi Condensed', sans-serif;
+
+  --bg: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+  --dark-text: hsl(229, 25%, 31%);
+  --score-text: hsl(229, 64%, 46%);
+  --header-outline: hsl(217, 16%, 45%);
+}
+
+/*************** BODY ***************/
+
+body {
+  background: var(--bg);
+}
