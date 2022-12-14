@@ -118,7 +118,7 @@ body {
 .playground {
   width: 60%;
   margin: 0 auto;
-  border: 1px red solid;
+  /* border: 1px red solid; */
   padding: 0;
   position: relative;
   display: flex;
@@ -141,33 +141,41 @@ body {
 }
 
 .item {
-  border: .75em green solid;
   border-radius: 50%;
   padding: 1em;
   background-color: #fff;
+  cursor: pointer;
+  width: 7em;
+  height: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item__img {
+  /* border: 1px red solid; */
+  object-fit: cover;
+
 }
 
 svg {
   fill: hsl(214, 47%, 23%);
 }
 
-.item__img {
-  border: 1px red solid;
-  object-fit: cover;
-}
+
 
 .row-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 .row-middle {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid cyan;
+  /* border: 1px solid cyan; */
   width: 85%;
 }
 
@@ -179,7 +187,7 @@ svg {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  border: 1px solid violet;
+  /* border: 1px solid violet; */
 }
 
 .row-bottom > .item {
@@ -195,7 +203,7 @@ svg {
 }
 
 .rules-btn {
-  border: 1px green solid;
+  /* border: 1px green solid; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
