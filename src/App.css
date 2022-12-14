@@ -58,6 +58,8 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .show {
@@ -189,9 +191,16 @@ svg {
 .rules {
   position: relative;
   display: flex;
+  flex-direction: column;
+}
+
+.rules-btn {
+  border: 1px green solid;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 90%;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .rules__button {
@@ -202,8 +211,26 @@ svg {
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
+  cursor: pointer;
 }
 
+.rules__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.rules__title {
+  font-size: 2rem;
+  color: var(--dark-text);
+}
+
+.close__btn {
+  align-self: center;
+  cursor: pointer;
+}
+
+/* 
 .rules__modal {
   position: relative;
   display: static;
@@ -250,28 +277,7 @@ svg {
 
 .rules__img {
   margin-top: 2em;
-}
-
-/*************** MODAL ***************/
-
-.App > * {
-  border: 2px solid green;
-}
-
-.modal {
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1500;
-}
-
-.p {
-  color: red;
-  font-size: 5rem;
-}
+} */
 
 /*************** MEDIA ***************/
 
