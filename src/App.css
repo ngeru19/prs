@@ -116,15 +116,86 @@ body {
 /*************** PLAYGROUND ***************/
 
 .playground {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
-  /* border: 1px red solid; */
+  border: 1px red solid;
   padding: 0;
+}
+
+.playground--phase_one {
+  border: 1px solid green;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  /* display: none; */
+}
+
+.playground--phase_two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  display: none;
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.area__item {
+  border-radius: 50%;
+  padding: 1em;
+  background-color: #fff;
+  cursor: pointer;
+  width: 14em;
+  height: 14em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2em blue;
+}
+
+.area__title {
+  text-transform: uppercase;
+  align-self: center;
+  margin: 2em;
+  letter-spacing: .1em;
+  color: #fff;
+}
+
+.area__img {
+  object-fit: cover;
+  width: 50%;
+}
+
+.result__area {
+  border: 1px red solid;
+  margin-top: 8em;
+}
+
+.result__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.result__button {
+  padding: 1em 2em;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: var(--dark-text);
+  letter-spacing: .25em;
+  margin-top: 2em;
 }
 
 .playground__bg {
@@ -235,7 +306,6 @@ svg {
 
 .close__btn {
   align-self: center;
-  cursor: pointer;
 }
 
 /* 
