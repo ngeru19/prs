@@ -29,7 +29,7 @@ export default function Item({title, alt, color, source}) {
         onClick={ (e) => {
             setUserChoice(getUserChoice(e.target));
             setSheldonChoice(getSheldonChoice());
-            setToggler(prevValue => !prevValue)
+            setToggler(prev => !prev)
         }}>
             
             <img 
@@ -41,3 +41,4 @@ export default function Item({title, alt, color, source}) {
         </div>
     )
 }
+
