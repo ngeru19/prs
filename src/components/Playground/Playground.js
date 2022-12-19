@@ -1,17 +1,34 @@
 import React, {useState} from "react";
 import PhaseOne from "./PhaseOne";
 import PhaseTwo from "./PhaseTwo";
-import { PlaygroundContext } from "./PlaygroundContext";
-import data from "../data";
+import { PlaygroundContext } from "../../contexts/PlaygroundContext";
+import data from "../../data/data";
+import "./Playground.css"
 
-export default function Playground() {
+export default function Playground({setGameScore}) {
+
+    /*** States ***/
 
     const [userChoice, setUserChoice] = useState('');
     const [sheldonChoice, setSheldonChoice] = useState('');
     const [toggler, setToggler] = useState(true);
+    const [gameResult, setGameResult] = useState('');
     const base = data[0];
 
-    const playgroundContextValues = {userChoice, setUserChoice, sheldonChoice, setSheldonChoice, toggler, setToggler, base}
+    /*** Context ***/
+
+    const playgroundContextValues = { 
+        userChoice, 
+        setUserChoice, 
+        sheldonChoice, 
+        setSheldonChoice, 
+        toggler, 
+        setToggler,  
+        gameResult, 
+        setGameResult, 
+        setGameScore,
+        base
+    }
 
     return(
 

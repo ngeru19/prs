@@ -1,12 +1,19 @@
-
-import React from "react";
 import './Modal.css'
-import '../../App.css'
 
 export default function Modal({active, setActive, children}) {
+    
+    /* Click handlers */
+
+    const handleModalClick = () => setActive(false);
+    const handleModalUnclick = (e) => e.stopPropagation() 
+    
     return(
-        <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
-            <div className={active ? "modal__content active" : "modal__content"} onClick={e => e.stopPropagation()}>
+        <div 
+        className={active ? "modal active" : "modal"} 
+        onClick={handleModalClick}>
+            <div 
+            className={active ? "modal__content active" : "modal__content"} 
+            onClick={handleModalUnclick}>
                 {children}
             </div>
         </div>

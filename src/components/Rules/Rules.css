@@ -1,0 +1,42 @@
+
+
+.rules {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rules-btn {
+    /* border: 1px green solid; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .rules__button {
+    margin-top: 1em;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .rules__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+  
+  .rules__title {
+    font-size: 2rem;
+    color: var(--dark-text);
+  }
+  
+  .close__btn {
+    align-self: center;
+  }
