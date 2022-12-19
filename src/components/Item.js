@@ -1,10 +1,12 @@
 import React from "react";
+import { useContext } from "react";
+import { PlaygroundContext } from "./PlaygroundContext";
 
-export default function Item({title, alt, color, source, setUserChoice, setSheldonChoice}) {
+export default function Item({title, alt, color, source}) {
 
-    const myStyle = {
-        border: `solid .75em ${color}`
-    }
+    const {setUserChoice, setSheldonChoice, setToggler} = useContext(PlaygroundContext);
+
+    const myStyle = { border: `solid .75em ${color }`}
 
     const options = ['spock', 'lizard', 'scissors', 'rock', 'paper']
 
@@ -20,26 +22,22 @@ export default function Item({title, alt, color, source, setUserChoice, setSheld
         return target.classList[1]
     };
 
-
-
-    /* function handleClick(e) {
-        console.log(getUserChoice(e.target));
-
-    } */
-
-    /* onShow={() => setActiveIndex(0)} */
-
     return(
-        <div className={'item ' + title} style={myStyle} 
-        onClick={
-            (e) => {
-                setUserChoice(getUserChoice(e.target));
-                setSheldonChoice(getSheldonChoice());
-            }}>
-
-
-            <img className="item__img" src={"assets/" + source} 
-            alt={alt}></img>
+        <div 
+        className={'item ' + title} 
+        style={myStyle} 
+        onClick={ (e) => {
+            setUserChoice(getUserChoice(e.target));
+            setSheldonChoice(getSheldonChoice());
+            setToggler(prevValue => !prevValue)
+        }}>
+            
+            <img 
+            className="item__img" 
+            src={"assets/" + source} 
+            alt={alt} 
+            />
+ 
         </div>
     )
 }

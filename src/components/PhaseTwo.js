@@ -1,8 +1,11 @@
 import React from "react";
-
-
+import { useContext } from "react";
+import { PlaygroundContext } from "./PlaygroundContext";
 
 export default function PhaseTwo() {
+    
+    const {setToggler} = useContext(PlaygroundContext);
+
     return(
         <div className="playground--phase_two">
                 <div className="area user__area">
@@ -14,7 +17,7 @@ export default function PhaseTwo() {
                 
                 <div className="area result__area">
                     <h2 className="result__title">You win</h2>
-                    <button className="result__button">play again</button>
+                    <button className="result__button" onClick={() => setToggler(prev => !prev)}>play again</button>
                 </div>
                 
                 <div className="area opponent__area">

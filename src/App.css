@@ -131,6 +131,7 @@ body {
   align-items: center;
   width: 75%;
   margin: 0 auto;
+  transition: 1s all;
   /* display: none; */
 }
 
@@ -140,7 +141,7 @@ body {
   align-items: center;
   width: 75%;
   margin: 0 auto;
-  display: none;
+  transition: 1s all;
 }
 
 .area {

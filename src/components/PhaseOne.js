@@ -1,55 +1,53 @@
 import React from "react";
 import Item from "./Item";
+import { useContext } from "react";
+import { PlaygroundContext } from "./PlaygroundContext";
 
-export default function PhaseOne({data, setUserChoice, setSheldonChoice}) {
+export default function PhaseOne() {
+
+    const {base, setUserChoice, setSheldonChoice, setToggler} = useContext(PlaygroundContext);
+
     return(
         <div className="playground--phase_one">
                 <img className="playground__bg" src="assets/bg-pentagon.svg" 
                 alt="pentagon image"></img>
+
                 <div className="playground__row row-top">
                     <Item
-                    source={data[0].path} 
+                    source={base.scissors.path} 
                     alt="image of scissors"
-                    color={data[0].color}
-                    title={data[0].title}
-                    setUserChoice={setUserChoice}
-                    setSheldonChoice={setSheldonChoice}
+                    color={base.scissors.color}
+                    title={base.scissors.title}
                     />
                 </div>
+                
                 <div className="playground__row row-middle">
                     <Item
-                        source={data[1].path} 
+                        source={base.spock.path} 
                         alt="image of scissors"
-                        color={data[1].color}
-                        title={data[1].title}
-                        setUserChoice={setUserChoice}
-                        setSheldonChoice={setSheldonChoice} 
+                        color={base.spock.color}
+                        title={base.spock.title}
                     />
                     <Item
-                        source={data[2].path} 
+                        source={base.paper.path} 
                         alt="image of scissors"
-                        color={data[2].color}
-                        title={data[2].title}
-                        setUserChoice={setUserChoice}
-                        setSheldonChoice={setSheldonChoice} 
+                        color={base.paper.color}
+                        title={base.paper.title}
                     />
                 </div>
+                
                 <div className="playground__row row-bottom">
                     <Item
-                        source={data[3].path} 
+                        source={base.lizard.path} 
                         alt="image of scissors"
-                        color={data[3].color}
-                        title={data[3].title}
-                        setUserChoice={setUserChoice}
-                        setSheldonChoice={setSheldonChoice} 
+                        color={base.lizard.color}
+                        title={base.lizard.title} 
                     />
                     <Item
-                        source={data[4].path} 
+                        source={base.rock.path} 
                         alt="image of scissors"
-                        color={data[4].color}
-                        title={data[4].title}
-                        setUserChoice={setUserChoice}
-                        setSheldonChoice={setSheldonChoice} 
+                        color={base.rock.color}
+                        title={base.rock.title} 
                     />
                 </div>
             </div>

@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Playground from './components/Playground';
 import Rules from './components/Rules';
 import Modal from './components/Modal/Modal';
-import data from './data';
 import { useState } from 'react';
 
 function App() {
@@ -13,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Playground data={data}/>
+      <Playground />
       <Modal active = {modalActive} setActive = {setModalActive}>
         <Rules setActive = {setModalActive} />
       </Modal>
