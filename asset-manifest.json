@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ngeru19/prs/static/css/main.d5711525.css",
+    "main.js": "/ngeru19/prs/static/js/main.6cf0f069.js",
+    "index.html": "/ngeru19/prs/index.html",
+    "main.d5711525.css.map": "/ngeru19/prs/static/css/main.d5711525.css.map",
+    "main.6cf0f069.js.map": "/ngeru19/prs/static/js/main.6cf0f069.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5711525.css",
+    "static/js/main.6cf0f069.js"
+  ]
+}
