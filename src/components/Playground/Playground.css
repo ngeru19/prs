@@ -3,8 +3,12 @@
 .playground {
     width: 80%;
     margin: 0 auto;
-    border: 1px red solid;
+    border: 1px solid blue;
     padding: 0;
+  }
+
+  .playground--phase_two > * {
+    border: 1px dotted brown;
   }
   
   .playground--phase_one {
@@ -63,7 +67,7 @@
   }
   
   .result__area {
-    border: 1px red solid;
+    /* border: 1px red solid; */
     margin-top: 8em;
   }
   

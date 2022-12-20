@@ -54,7 +54,7 @@ export default function PhaseTwo() {
                 <button className="result__button" onClick={handleClick}>play again</button>
             </div>
             <div className="area user__area">
-                <h2 className="area__title">Sheldon picked</h2>
+                <h2 className="area__title">AI picked</h2>
                 <div 
                 className="area__item" 
                 style={{border: `solid 1.5em ${base[sheldonChoice].color}`}}>
