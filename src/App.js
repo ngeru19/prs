@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Playground from './components/Playground/Playground';
 import Rules from './components/Rules/Rules';
 import Modal from './components/Modal/Modal';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 function App() {
 

@@ -107,6 +107,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .15s ease-in-out;
+  }
+
+  .item:hover {
+    transform: scale(1.2);
+    background-color: #fff;
   }
   
   .item__img {

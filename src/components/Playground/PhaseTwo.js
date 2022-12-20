@@ -10,15 +10,25 @@ export default function PhaseTwo() {
 
     /* Game result logic */
 
-    let text = ''
+    /* let text; */
 
-    if(base[userChoice].defeats.includes(sheldonChoice)) {
-        setGameResult('win')
-    } else if(base[sheldonChoice].defeats.includes(userChoice)) {
-        setGameResult('lost')
-    } else (
-        setGameResult('draw')
-    )
+    useEffect(() => {
+        if(base[userChoice].defeats.includes(sheldonChoice)) {
+            setGameResult('win')
+        } else if(base[sheldonChoice].defeats.includes(userChoice)) {
+            setGameResult('lost')
+        } else (
+            setGameResult('draw')
+        )
+    }, [userChoice, sheldonChoice])
+
+    function changeGameScore() {
+        if(gameResult === 'win') {
+            setGameScore(prev => prev +1)
+        } else if(gameResult === 'lost') {
+            setGameScore(prev => prev - 1)
+        }
+    }
 
     /* Click handler */
 
@@ -26,6 +36,7 @@ export default function PhaseTwo() {
         setToggler(prev => !prev);
         setUserChoice('');
         setSheldonChoice('');
+        changeGameScore();
     }
 
     return(
@@ -53,3 +64,12 @@ export default function PhaseTwo() {
         </div>    
     )
 }
+
+
+/* if(base[userChoice].defeats.includes(sheldonChoice)) {
+    setGameResult('win')
+} else if(base[sheldonChoice].defeats.includes(userChoice)) {
+    setGameResult('lost')
+} else (
+    setGameResult('draw')
+) */
