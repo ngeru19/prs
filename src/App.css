@@ -51,17 +51,11 @@ body {
   font-family: var(--text);
   font-weight: 600;
   width: 100vw;
-  /* height: 100vh; */
-  
 }
 
 .App {
   width: 100vw;
   height: 100vh;
- /*  min-height: 100vh;
-  min-height: -moz-available;
-  min-height: -webkit-fill-available;
-  min-height: fill-available; */
   position: relative;
   max-width: 1400px;
   margin: 0 auto;

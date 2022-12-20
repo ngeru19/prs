@@ -1,6 +1,6 @@
 
 
-export default [
+const rawData = [
     {
         scissors : {
             title: 'scissors',
@@ -38,3 +38,5 @@ export default [
         }
     }
 ]
+
+export default rawData;

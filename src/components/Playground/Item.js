@@ -5,7 +5,7 @@ export default function Item({title, alt, color, source}) {
 
     /* Context */
 
-    const {setUserChoice, setSheldonChoice, setToggler, gameScore, gameResult} = useContext(PlaygroundContext);
+    const {setUserChoice, setSheldonChoice, setToggler} = useContext(PlaygroundContext);
 
     /* Dynamic style */
 
@@ -30,19 +30,19 @@ export default function Item({title, alt, color, source}) {
 
     /* Click handler */
 
-    function gameScoreLogic() {
+   /*  function gameScoreLogic() {
         if(gameResult === 'win') {
             return gameScore = gameScore + 1
         } else if (gameResult === 'lost') {
             return gameScore = gameScore - 1
         }
-    }
+    } */
 
     const handleClick = (e) => {
         setUserChoice(getUserChoice(e.target));
         setSheldonChoice(getSheldonChoice());
         setToggler(prev => !prev);
-        gameScoreLogic();
+        /* gameScoreLogic(); */
     }
 
     return(

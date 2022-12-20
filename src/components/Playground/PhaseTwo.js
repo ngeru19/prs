@@ -46,11 +46,11 @@ export default function PhaseTwo() {
                 <div 
                 className="area__item" 
                 style={{border: `solid 1.5em ${base[userChoice].color}`}}>
-                    <img className="area__img" src={"assets/" + base[userChoice].path} ></img>
+                    <img className="area__img" src={"assets/" + base[userChoice].path} alt="some icon"></img>
                 </div>
             </div>    
             <div className="area result__area">
-                <h2 className="result__title">{gameResult == 'draw' ? `Draw` : `you ${gameResult}`}</h2>
+                <h2 className="result__title">{gameResult === 'draw' ? `Draw` : `you ${gameResult}`}</h2>
                 <button className="result__button" onClick={handleClick}>play again</button>
             </div>
             <div className="area user__area">
@@ -58,7 +58,7 @@ export default function PhaseTwo() {
                 <div 
                 className="area__item" 
                 style={{border: `solid 1.5em ${base[sheldonChoice].color}`}}>
-                    <img className="area__img" src={"assets/" + base[sheldonChoice].path} ></img>
+                    <img className="area__img" src={"assets/" + base[sheldonChoice].path} alt="some icon"></img>
                 </div>
             </div>   
         </div>    
