@@ -7,11 +7,11 @@
   }
   
   .rules-btn {
-    /* border: 1px green solid; */
+    border: 1px green solid;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 60%;
+    /* width: 60%; */
     margin: 0 auto;
     position: absolute;
     right: 10%;
@@ -43,4 +43,14 @@
   
   .close__btn {
     align-self: center;
+  }
+
+  @media (max-width: 450px) {
+    .rules__button {
+      font-size: 2rem;
+    }
+
+    .rules-btn {
+      bottom: 15%;
+    }
   }
