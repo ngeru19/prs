@@ -31,6 +31,7 @@
     width: 75%;
     margin: 0 auto;
     transition: 1s all;
+    position: relative;
   }
   
   .area {
@@ -159,5 +160,11 @@
   
   .row-bottom > .item {
     margin: 0 2em;
+  }
+
+  @media (max-width: 620px) {
+    :root {
+          font-size: .4rem;
+      }
   }
   

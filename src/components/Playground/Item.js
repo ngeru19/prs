@@ -47,7 +47,7 @@ export default function Item({title, alt, color, source}) {
 
     return(
         <div className={'item ' + title} style={myStyle} onClick={handleClick}>
-            <img className="item__img" src={"assets/" + source} alt={alt}/>
+            <img className="item__img" src={source} alt={alt}/>
         </div>
     )
 }

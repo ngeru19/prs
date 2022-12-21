@@ -1,11 +1,12 @@
 import './Header.css'
+import logoBonus from "../../assets/logo-bonus.svg"
 
 export default function Header({gameScore}) {
     return(
         <div className="header">
             <img 
             className="header__logo" 
-            src="assets/logo-bonus.svg" 
+            src={logoBonus} 
             alt="logo with text rock, paper, scissors, lizard, spock"></img>
             
             <div className="header__score">
