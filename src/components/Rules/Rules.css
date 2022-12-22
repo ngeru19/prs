@@ -59,7 +59,7 @@
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 480px) {
     .rules__button {
       font-size: 2rem;
     }
