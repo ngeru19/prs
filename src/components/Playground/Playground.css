@@ -3,17 +3,13 @@
 .playground {
     width: 80%;
     margin: 0 auto;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding: 0;
     margin-top: 3em;
   }
-
-  .playground--phase_two > * {
-    border: 1px dotted brown;
-  }
   
   .playground--phase_one {
-    border: 1px solid burlywood;
+    /* border: 1px solid burlywood; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -52,7 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 2em red;
+    /* border: solid 2em red; */
   }
   
   .area__title {
@@ -82,12 +78,17 @@
   .result__button {
     padding: 1em 2em;
     background-color: #fff;
-    border: none;
     border-radius: 10px;
+    border: none;
     text-transform: uppercase;
     color: var(--dark-text);
     letter-spacing: .25em;
     margin-top: 2em;
+    transition: .1s ease-in-out;
+  }
+
+  .result__button:hover {
+    transform: scale(1.1);
   }
   
   .playground__bg {
@@ -137,14 +138,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
   }
   
   .row-middle {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid cyan;
+    /* border: 1px solid cyan; */
     width: 85%;
   }
   
@@ -156,7 +157,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    border: 1px solid violet;
+    /* border: 1px solid violet; */
   }
   
   .row-bottom > .item {
@@ -186,7 +187,7 @@
     }
 
     .row-middle > .item {
-      margin: 2em 9em;  
+      margin: 2em 6em;  
     }
 
     .row-bottom > .item {
@@ -205,6 +206,41 @@
       justify-content: center;
       align-items: center;
       transition: all .15s ease-in-out;
+    }
+
+    .playground--phase_two {
+      display: grid;
+      grid-template-areas: "userChoice aiChoice"
+                           "result result";
+    }
+
+    .user__area {
+      grid-area: userChoice;
+    }
+
+    .ai__area {
+      grid-area: aiChoice;
+    }
+
+    .result__area {
+      grid-area: result;
+    }
+
+    .area__title {
+      font-size: 3.4rem;
+    }
+
+    .area__item {
+      width: 24em;
+      height: 24em;
+    }
+
+    .result__title {
+      font-size: 6rem;
+    }
+
+    .result__button {
+      font-size: 2rem;
     }
   }
 
@@ -249,6 +285,23 @@
       justify-content: center;
       align-items: center;
       transition: all .15s ease-in-out;
+    }
+
+    .area__title {
+      font-size: 3rem;
+    }
+
+    .area__item {
+      width: 19em;
+      height: 19em;
+    }
+
+    .result__title {
+      font-size: 5rem;
+    }
+
+    .result__button {
+      font-size: 2rem;
     }
   }
 

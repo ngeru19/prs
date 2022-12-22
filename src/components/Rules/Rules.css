@@ -7,7 +7,7 @@
   }
   
   .rules-btn {
-    border: 1px green solid;
+    /* border: 1px green solid; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -15,7 +15,7 @@
     margin: 0 auto;
     position: absolute;
     right: 10%;
-    bottom: 5%;
+    bottom: 15%;
   }
   
   .rules__button {
@@ -45,12 +45,26 @@
     align-self: center;
   }
 
+  @media (max-width: 620px) {
+    .rules__button {
+      font-size: 2rem;
+    }
+
+    .rules-btn {
+      bottom: 15em;
+    }
+
+    .rules__title {
+      font-size: 3.5rem;
+    }
+  }
+
   @media (max-width: 450px) {
     .rules__button {
       font-size: 2rem;
     }
 
     .rules-btn {
-      bottom: 15%;
+      bottom: 20em;
     }
   }

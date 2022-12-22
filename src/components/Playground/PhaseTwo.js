@@ -53,7 +53,7 @@ export default function PhaseTwo() {
                 <h2 className="result__title">{gameResult === 'draw' ? `Draw` : `you ${gameResult}`}</h2>
                 <button className="result__button" onClick={handleClick}>play again</button>
             </div>
-            <div className="area user__area">
+            <div className="area ai__area">
                 <h2 className="area__title">AI picked</h2>
                 <div 
                 className="area__item" 
