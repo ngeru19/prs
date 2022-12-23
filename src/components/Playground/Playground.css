@@ -14,7 +14,7 @@
     z-index: -1;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-48%);
+    transform: translate(-50%,-50%);
     width: 40%;
   }
   
@@ -57,6 +57,7 @@
     width: 75%;
     margin: 0 auto;
     transition: 1s all;
+    /* border: 1px solid maroon; */
   }
 
   .playground__row {
@@ -210,6 +211,9 @@
       display: grid;
       grid-template-areas: "userChoice aiChoice"
                            "result result";
+      /* border: 2px dotted firebrick; */
+      align-items: center;
+      justify-content: center;
     }
 
     .user__area {
