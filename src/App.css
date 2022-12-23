@@ -50,8 +50,8 @@ body {
   background: var(--bg);
   font-family: var(--text);
   font-weight: 600;
-  width: 100vw;
-  height: 100vh;
+  /* border: 1px solid red; */
+  overflow: hidden;
 }
 
 .App {
@@ -59,7 +59,7 @@ body {
   height: 100vh;
   position: relative;
   max-width: 1400px;
-  margin: 0;
+  margin: 0 auto;
   /* border: 1px solid green; */
 }
 

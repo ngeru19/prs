@@ -1,3 +1,4 @@
+import '../../App.css'
 import './Header.css'
 import logoBonus from "../../assets/logo-bonus.svg"
 

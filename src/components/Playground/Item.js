@@ -1,3 +1,4 @@
+import './Playground.css'
 import { useContext } from "react";
 import { PlaygroundContext } from "../../contexts/PlaygroundContext";
 
@@ -5,16 +6,16 @@ export default function Item({title, alt, color, source}) {
 
     /* Context */
 
-    const {setUserChoice, setSheldonChoice, setToggler} = useContext(PlaygroundContext);
+    const {setUserChoice, setAiChoice, setToggler} = useContext(PlaygroundContext);
 
     /* Dynamic style */
 
     const myStyle = { border: `solid .75em ${color }`}
 
-    /* Sheldon's choice logic */
+    /* Ai's choice logic */
 
     const options = ['spock', 'lizard', 'scissors', 'rock', 'paper']
-    function getSheldonChoice() {
+    function getAiChoice() {
         const random = Math.floor(Math.random() * options.length)
         return options[random];
     }
@@ -30,20 +31,13 @@ export default function Item({title, alt, color, source}) {
 
     /* Click handler */
 
-   /*  function gameScoreLogic() {
-        if(gameResult === 'win') {
-            return gameScore = gameScore + 1
-        } else if (gameResult === 'lost') {
-            return gameScore = gameScore - 1
-        }
-    } */
-
     const handleClick = (e) => {
         setUserChoice(getUserChoice(e.target));
-        setSheldonChoice(getSheldonChoice());
+        setAiChoice(getAiChoice());
         setToggler(prev => !prev);
-        /* gameScoreLogic(); */
     }
+
+    /* Return */
 
     return(
         <div className={'item ' + title} style={myStyle} onClick={handleClick}>

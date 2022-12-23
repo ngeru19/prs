@@ -1,12 +1,15 @@
+import './Playground.css'
 import Item from "./Item";
 import { useContext } from "react";
 import { PlaygroundContext } from "../../contexts/PlaygroundContext";
 
-import iconScissors from "../../assets/icon-scissors.svg"
-import iconSpock from "../../assets/icon-spock.svg"
-import iconPaper from "../../assets/icon-paper.svg"
-import iconLizard from "../../assets/icon-lizard.svg"
-import iconRock from "../../assets/icon-rock.svg"
+/* Image assets import */
+
+import scissors from "../../assets/icon-scissors.svg"
+import spock from "../../assets/icon-spock.svg"
+import paper from "../../assets/icon-paper.svg"
+import lizard from "../../assets/icon-lizard.svg"
+import rock from "../../assets/icon-rock.svg"
 import pentagon from "../../assets/bg-pentagon.svg"
 
 export default function PhaseOne() {
@@ -22,7 +25,7 @@ export default function PhaseOne() {
 
                 <div className="playground__row row-top">
                     <Item
-                    source={iconScissors} 
+                    source={scissors} 
                     alt="icon of scissors sign"
                     color={base.scissors.color}
                     title={base.scissors.title}
@@ -31,13 +34,13 @@ export default function PhaseOne() {
                 
                 <div className="playground__row row-middle">
                     <Item
-                        source={iconSpock} 
+                        source={spock} 
                         alt="icon of spock's sign with hands"
                         color={base.spock.color}
                         title={base.spock.title}
                     />
                     <Item
-                        source={iconPaper} 
+                        source={paper} 
                         alt="icon of paper sign"
                         color={base.paper.color}
                         title={base.paper.title}
@@ -46,13 +49,13 @@ export default function PhaseOne() {
                 
                 <div className="playground__row row-bottom">
                     <Item
-                        source={iconLizard} 
+                        source={lizard} 
                         alt="icon of lizard sign"
                         color={base.lizard.color}
                         title={base.lizard.title} 
                     />
                     <Item
-                        source={iconRock} 
+                        source={rock} 
                         alt="icon of rock sign"
                         color={base.rock.color}
                         title={base.rock.title} 

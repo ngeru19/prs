@@ -1,26 +1,32 @@
-import React from "react";
-import { useContext, useEffect } from "react";
+import './Playground.css'
+import { useState, useContext, useEffect } from "react";
 import { PlaygroundContext } from "../../contexts/PlaygroundContext";
+
+/* Image assets import */
+
+import scissors from "../../assets/icon-scissors.svg"
+import spock from "../../assets/icon-spock.svg"
+import paper from "../../assets/icon-paper.svg"
+import lizard from "../../assets/icon-lizard.svg"
+import rock from "../../assets/icon-rock.svg"
 
 export default function PhaseTwo() {
     
     /* Context */
 
-    const {setToggler, base, userChoice, sheldonChoice, gameResult, setGameResult, setUserChoice, setSheldonChoice, setGameScore} = useContext(PlaygroundContext);
+    const {setToggler, base, userChoice, aiChoice, gameResult, setGameResult, setUserChoice, setAiChoice, setGameScore} = useContext(PlaygroundContext);
 
     /* Game result logic */
 
-    /* let text; */
-
     useEffect(() => {
-        if(base[userChoice].defeats.includes(sheldonChoice)) {
+        if(base[userChoice].defeats.includes(aiChoice)) {
             setGameResult('win')
-        } else if(base[sheldonChoice].defeats.includes(userChoice)) {
+        } else if(base[aiChoice].defeats.includes(userChoice)) {
             setGameResult('lost')
         } else (
             setGameResult('draw')
         )
-    }, [userChoice, sheldonChoice])
+    }, [userChoice, aiChoice])
 
     function changeGameScore() {
         if(gameResult === 'win') {
@@ -35,9 +41,57 @@ export default function PhaseTwo() {
     const handleClick = () => {
         setToggler(prev => !prev);
         setUserChoice('');
-        setSheldonChoice('');
+        setAiChoice('');
         changeGameScore();
     }
+
+    /* Image render logic */
+
+    const imgPool = [scissors, spock, paper, lizard, rock]
+    const [userImg, setUserImg] = useState(rock);
+    const [aiImg, setAiImg] = useState(lizard);
+
+    useEffect(() => {
+        switch(base[userChoice].title) {
+            case 'scissors':
+                setUserImg(scissors);
+                break;
+            case 'spock':
+                setUserImg(spock);
+                break;
+            case 'paper':
+                setUserImg(paper);
+                break;
+            case 'lizard':
+                setUserImg(lizard);
+                break;
+            case 'rock':
+                setUserImg(rock);
+                break; 
+        }
+    }, [userChoice]);
+
+    useEffect(() => {
+        switch(base[aiChoice].title) {
+            case 'scissors':
+                setAiImg(scissors);
+                break;
+            case 'spock':
+                setAiImg(spock);
+                break;
+            case 'paper':
+                setAiImg(paper);
+                break;
+            case 'lizard':
+                setAiImg(lizard);
+                break;
+            case 'rock':
+                setAiImg(rock);
+                break; 
+        }
+    }, [userChoice]);
+
+    /* Return */
 
     return(
         <div className="playground--phase_two">
@@ -46,7 +100,7 @@ export default function PhaseTwo() {
                 <div 
                 className="area__item" 
                 style={{border: `solid 1.5em ${base[userChoice].color}`}}>
-                    <img className="area__img" src={"assets/" + base[userChoice].path} alt="some icon"></img>
+                    <img className="area__img" src={userImg} alt="some icon"></img>
                 </div>
             </div>    
             <div className="area result__area">
@@ -57,19 +111,10 @@ export default function PhaseTwo() {
                 <h2 className="area__title">AI picked</h2>
                 <div 
                 className="area__item" 
-                style={{border: `solid 1.5em ${base[sheldonChoice].color}`}}>
-                    <img className="area__img" src={"assets/" + base[sheldonChoice].path} alt="some icon"></img>
+                style={{border: `solid 1.5em ${base[aiChoice].color}`}}>
+                    <img className="area__img" src={aiImg} alt="some icon"></img>
                 </div>
             </div>   
         </div>    
     )
 }
-
-
-/* if(base[userChoice].defeats.includes(sheldonChoice)) {
-    setGameResult('win')
-} else if(base[sheldonChoice].defeats.includes(userChoice)) {
-    setGameResult('lost')
-} else (
-    setGameResult('draw')
-) */

@@ -4,7 +4,11 @@ import imageRulesBonus from "../../assets/image-rules-bonus.svg"
 
 export default function Rules({setActive}) {
 
+    /* Click handlers */
+
     const handleClick = () => setActive(false);
+
+    /* Return */
 
     return(
         <div className="rules">

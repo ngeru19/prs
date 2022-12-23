@@ -1,4 +1,5 @@
 
+/*************** RULES ***************/
 
 .rules {
     position: relative;
@@ -11,7 +12,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* width: 60%; */
     margin: 0 auto;
     position: absolute;
     right: 10%;
@@ -44,6 +44,8 @@
   .close__btn {
     align-self: center;
   }
+
+  /*************** MEDIA ***************/
 
   @media (max-width: 620px) {
     .rules__button {

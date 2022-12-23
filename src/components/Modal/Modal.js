@@ -6,6 +6,8 @@ export default function Modal({active, setActive, children}) {
 
     const handleModalClick = () => setActive(false);
     const handleModalUnclick = (e) => e.stopPropagation() 
+
+    /* Return */
     
     return(
         <div 

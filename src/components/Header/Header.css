@@ -1,4 +1,7 @@
-
+   
+  /*************** HEADER ***************/
+   
+   
    .header {
     border: 4px solid var(--header-outline);
     border-radius: 14px;
@@ -43,6 +46,8 @@
     padding: 0;
     line-height: .85;
   }
+
+  /*************** MEDIA ***************/
 
   @media (max-width: 620px) {
     .header {
